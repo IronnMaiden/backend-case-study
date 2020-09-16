@@ -1,0 +1,9 @@
+1) query for calender 
+
+http://localhost:3000/calender?date=2020-09-10&email=johndoe@example.com
+http://localhost:3000/calender?date=2020-09-11&email=gddaboss@gmail.com
+
+
+2) query for search:
+
+http://localhost:3000/meetings?date=past&email=gddaboss@gmail.com
