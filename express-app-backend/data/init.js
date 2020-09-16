@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 mongoose.set( 'useFindAndModify', false );
 mongoose.set( 'returnOriginal', false );
 // create models
-require( '../models/Meetings' );
-require( '../models/Users' );
+require( '../models/Meeting' );
+require( '../models/User' );
 
 // drop existing meetings-app database
 //require( './deseed' );

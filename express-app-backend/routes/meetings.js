@@ -1,7 +1,7 @@
 const express = require( 'express' );
 
 const mongoose = require( 'mongoose' );
-const Meetings = mongoose.model( 'Meetings' );
+const Meetings = mongoose.model( 'Meeting' );
 
 const router = express.Router();
 
@@ -13,12 +13,13 @@ router.get( '/', function (req, res, next) {
 
     // http://localhost:3000/meetings?date=present
 
-    const filter = { date: { }, attendees: { $elemMatch: { } } };
+    const filter = { date: { } };
 
     
     console.log(filter);
+    
     if( email ) {
-        filter.attendees.$elemMatch.email = email;
+        filter.attendees = email;
     }
 
     const today = new Date();

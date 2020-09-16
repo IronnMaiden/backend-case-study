@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require( 'mongoose' );
 
 const router = express.Router();
-const Users = mongoose.model( 'Users' );
+const Users = mongoose.model( 'User' );
 
 /*
     *** Sample queries ***

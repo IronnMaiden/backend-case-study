@@ -23,4 +23,4 @@ usersSchema.path('email').validate(function (email) {
 }, 'Invalid email id format')
 
 
-mongoose.model( 'Users', usersSchema );
+mongoose.model( 'User', usersSchema );

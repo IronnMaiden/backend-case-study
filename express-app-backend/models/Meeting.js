@@ -10,9 +10,10 @@ const meetingSchema = new mongoose.Schema({
         required: true
     },
     date: {
-        type: Date,
-        default: new Date(),
+        // type: Date,
+        // default: new Date(),
         //default: Date.now(),
+        type: String,
         required: true
     },
     startTime: {
@@ -52,4 +53,4 @@ const meetingSchema = new mongoose.Schema({
 
 
 
-mongoose.model( 'Meetings', meetingSchema );
+mongoose.model( 'Meeting', meetingSchema );

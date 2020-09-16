@@ -2,29 +2,31 @@ const express = require( 'express' );
 const path = require( 'path' );
 
 const mongoose = require( 'mongoose' );
-const Meetings = mongoose.model( 'Meetings' );
+const Meetings = mongoose.model( 'Meeting' );
 
 const router = express.Router();
 
 
 router.get('/',( req, res, next ) => {
-    const date = new Date( req.query.date );
+    const date = req.query.date;
     console.log("date is");
     console.log(date); //
     const email = req.query.email;
     
 
-    const filter = { date, attendees: { $elemMatch: { } } };
-    console.log(filter);
+    const filter = { date };
     
     if( email ) {
-        filter.attendees.$elemMatch.email = email;
+        filter.attendees = email;
         console.log("email is:");
         console.log(email);
     }
-
+    
+    console.log(filter);
+    console.log( Meetings.collection.collectionName );
+    
     Meetings
-        .find( {filter} )
+        .find( filter )
         .exec(( error, results ) => {
             if( error ) {
                 error.status = 500;

@@ -4,7 +4,7 @@ const router = express.Router();
 const jwt = require( 'jsonwebtoken' );
 
 const mongoose = require( 'mongoose' );
-const Users = mongoose.model( 'Users' );
+const Users = mongoose.model( 'User' );
 
 /**
  * Sample request body
