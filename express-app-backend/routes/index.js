@@ -8,4 +8,23 @@ router.get( '/', ( req, res ) => {
     res.send( 'hello' );
 });
 
+router.put( '/', ( req, res ) => {
+    res.send( 'Invalid Put request' );
+});
+
+
+router.patch( '/', ( req, res ) => {
+    res.send( 'Invalid Patch request' );
+});
+
+
+router.delete( '/', ( req, res ) => {
+    res.send( 'Invalid Delete request' );
+});
+
+
+router.post( '/', ( req, res ) => {
+    res.send( 'Invalid Post request' );
+});
+
 module.exports = router;
